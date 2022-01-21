@@ -1,0 +1,13 @@
+<button (click)="decrement()" class="btn btn-primary">-</button>
+<span>{{ current$ | async }}</span>
+<button (click)="increment()" class="btn btn-primary">+</button>
+<div>
+  <button
+    [disabled]="(resetDisabled$ | async) === true"
+    (click)="reset()"
+    class="btn btn-danger"
+  >
+    Reset!
+  </button>
+</div>
+<app-counter-count-by></app-counter-count-by>
